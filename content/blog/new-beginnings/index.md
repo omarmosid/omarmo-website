@@ -44,6 +44,8 @@ mouth. Even the all-powerful Pointing has no control about the blind texts it is
 an almost unorthographic life One day however a small line of blind text by the
 name of Lorem Ipsum decided to leave for the far World of Grammar.
 
+---
+
 ### According a funnily until pre-set or arrogant well cheerful
 
 The Big Oxmox advised her not to do so, because there were thousands of bad

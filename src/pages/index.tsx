@@ -1,25 +1,56 @@
-import { Box, Heading, Text } from "@chakra-ui/layout";
+import { Button } from "@chakra-ui/button";
+import {
+  Box,
+  Heading,
+  List,
+  ListIcon,
+  ListItem,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/layout";
+import GatsbyLink from "gatsby-link";
 import { FullLayout } from "../components/layout";
-import { CustomLink } from "../components/Link";
+import { CustomLink } from "../components/link";
+import { FcBusinessman, FcBullish, FcBinoculars } from "react-icons/fc";
 
 const Home = () => {
   return (
     <>
       <FullLayout>
-        <Box pt={24} pb={10}>
-          <Heading as="h1" pb={4} fontSize={["4xl", "6xl"]}>
+        <Box pt={28} pb={10}>
+          <Heading as="h1" pb={6} fontSize={["4xl", "6xl"]}>
             Hi! I'm Omar.
           </Heading>
-          <Text fontSize={["xl", "2xl"]}>
-            I am self-taught Full-Stack Developer passionate about building
-            products with delightful user experiences. I happen to be a data
-            geek and I am an obsessed collector of beautiful visualizations. I
-            also thoroughly enjoy reading{" "}
-            <CustomLink to="https://amzn.to/38HCMIW" isExternal>
-              historical fictions
-            </CustomLink>{" "}
-            and playing role-playing games.
-          </Text>
+
+          <List fontSize={["md", "lg", "xl"]} listStylePosition="inside">
+            <ListItem>
+              <ListIcon as={FcBusinessman} color="green.500" />I am a
+              self-taught Full-Stack Developer passionate about building
+              products that delight users.
+            </ListItem>
+            <br />
+            <ListItem>
+              <ListIcon as={FcBullish} color="green.500" />I am a Data geek and
+              an obsessed collector of beautiful visualizations.
+            </ListItem>
+            <br />
+            <ListItem>
+              <ListIcon as={FcBinoculars} color="green.500" />I also thoroughly
+              enjoy reading{" "}
+              <CustomLink to="https://amzn.to/38HCMIW" isExternal>
+                historical fictions
+              </CustomLink>{" "}
+              and playing role-playing games.
+            </ListItem>
+          </List>
+
+          <Box pt={10}>
+            <GatsbyLink to="/blog">
+              <Button size="md" variant="outline" colorScheme="blue">
+                Read Blog
+              </Button>
+            </GatsbyLink>
+          </Box>
         </Box>
       </FullLayout>
     </>

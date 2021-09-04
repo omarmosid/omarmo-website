@@ -27,8 +27,8 @@ const theme = extendTheme({
         bg: mode("gray.100", "gray.800")(props),
         lineHeight: "base",
       },
-      p: {
-        color: mode("gray.700", "whiteAlpha.700")(props),
+      "p, ul, ol, span, li": {
+        color: mode("gray.800", "whiteAlpha.700")(props),
       },
       ".heading-anchor": {
         svg: {

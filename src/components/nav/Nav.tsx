@@ -34,7 +34,7 @@ export const Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box>
+    <Box id="nav" position={["static", "sticky"]} top="0px" zIndex="popover">
       <Flex
         bg={useColorModeValue("gray.100", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
