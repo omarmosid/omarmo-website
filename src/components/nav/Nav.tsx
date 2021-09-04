@@ -22,10 +22,11 @@ import {
   BsFillCaretDownFill,
   BsFillCaretRightFill,
   BsSun,
+  BsMoon,
 } from "react-icons/bs";
 import { MobileNav } from "./MobileNav";
 import { DesktopNav } from "./DesktopNav";
-import { Link as GatsbyLink } from "gatsby"
+import { Link as GatsbyLink } from "gatsby";
 
 export const Nav = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -35,7 +36,7 @@ export const Nav = () => {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
+        bg={useColorModeValue("gray.100", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
         py={{ base: 2 }}
@@ -64,13 +65,21 @@ export const Nav = () => {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+        <Flex
+          flex={{ base: 1 }}
+          justify={{ base: "center", md: "start" }}
+          alignItems="center"
+        >
           <Text
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
+            fontWeight="bold"
             color={useColorModeValue("gray.800", "white")}
+            fontSize={["sm", "lg", "xl"]}
           >
-            <Link as={GatsbyLink} to="/">Omar Mohammad</Link>
+            <Link as={GatsbyLink} to="/">
+              {`<Omar Mo />`}
+            </Link>
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -107,10 +116,9 @@ export const Nav = () => {
             Sign Up
           </Button> */}
           <IconButton
-            variant="outline"
-            colorScheme="teal"
+            variant="ghost"
             aria-label="Change color mode"
-            icon={<BsSun />}
+            icon={colorMode === "dark" ? <BsSun /> : <BsMoon />}
             onClick={toggleColorMode}
           />
         </Stack>

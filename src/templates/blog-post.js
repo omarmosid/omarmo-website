@@ -1,17 +1,17 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Bio from "../components/bio";
+import { FullLayout } from "../components/layout";
+import Seo from "../components/seo";
 
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const { previous, next } = data;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <FullLayout location={location} title={siteTitle}>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -60,11 +60,11 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
-    </Layout>
-  )
-}
+    </FullLayout>
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
@@ -104,4 +104,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

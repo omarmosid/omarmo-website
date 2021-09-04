@@ -2,6 +2,23 @@ import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
 const theme = extendTheme({
+  colors: {
+    brand: {
+      50: "#251162",
+      75: "#1E1571",
+      100: "#191D80",
+      200: "#1D328F",
+      300: "#224A9E",
+      400: "#2765AC",
+      500: "#2C82BA",
+      600: "#46ABC5",
+      700: "#61CDD0",
+      800: "#7CDACB",
+      900: "#98E3C9",
+      950: "#B5ECCE",
+      975: "#D2F4DB",
+    },
+  },
   styles: {
     global: props => ({
       body: {
@@ -10,9 +27,14 @@ const theme = extendTheme({
         bg: mode("gray.100", "gray.800")(props),
         lineHeight: "base",
       },
-      a: {
-        color: "primary",
-        textDecoration: "underline",
+      p: {
+        color: mode("gray.700", "whiteAlpha.700")(props),
+      },
+      ".heading-anchor": {
+        svg: {
+          fill: mode("gray.800", "whiteAlpha.900")(props),
+          visibility: "initial",
+        },
       },
       ".content": {
         "h1, h2, h3, h4, h5, h6": {
@@ -20,7 +42,8 @@ const theme = extendTheme({
           letterSpacing: "tight",
           lineHeight: "shorter",
           mt: 12,
-          mb: 6,
+          mb: 4,
+          color: mode("brand.400", "brand.600")(props),
         },
         h1: {
           fontSize: "4xl",
@@ -43,9 +66,13 @@ const theme = extendTheme({
         p: {
           lineHeight: "tall",
           margin: "0",
-          marginBottom: 8,
+          marginBottom: 6,
           padding: 0,
           fontSize: "md",
+        },
+        a: {
+          color: mode("brand.400", "brand.600")(props),
+          textDecoration: "underline",
         },
         "ul, ol": {
           marginLleft: 0,
