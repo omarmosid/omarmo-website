@@ -45,11 +45,11 @@ const Home = () => {
           </List>
 
           <Box pt={10}>
-            <GatsbyLink to="/blog">
+            {/* <GatsbyLink to="/blog">
               <Button size="md" variant="outline" colorScheme="blue">
                 Read Blog
               </Button>
-            </GatsbyLink>
+            </GatsbyLink> */}
           </Box>
         </Box>
       </FullLayout>

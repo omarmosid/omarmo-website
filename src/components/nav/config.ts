@@ -45,12 +45,20 @@ const NAV_ITEMS: Array<NavItem> = [
 //     href: "#",
 //   },
     {
-        label: "About",
-        href: "/about"
+        label: "Now",
+        href: "/now"
     },
     {
         label: "Blog",
-        href: "/blog"
+        href: "/posts"
+    },
+    {
+        label: "Projects",
+        href: "/projects"
+    },
+    {
+        label: "Tips",
+        href: "/tips"
     },
 ];
 

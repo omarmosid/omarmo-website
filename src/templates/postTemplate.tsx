@@ -1,15 +1,14 @@
-import * as React from "react";
-import { Link, graphql } from "gatsby";
-
-import Bio from "../components/bio";
-import { FullLayout } from "../components/layout";
-import Seo from "../components/seo";
-import { ContentHeader } from "../components/header";
+import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
+import * as React from "react";
 import { ContentBody } from "../components/content";
 import { ContentNav } from "../components/content/ContentNav";
+import { ContentHeader } from "../components/header";
+import { FullLayout } from "../components/layout";
+import Seo from "../components/seo";
 
-const BlogPostTemplate = ({ data, location }) => {
+const PostTemplate = ({ data, location }) => {
+  console.log(data)
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const { previous, next } = data;
@@ -24,6 +23,7 @@ const BlogPostTemplate = ({ data, location }) => {
             title={post.frontmatter.title}
             date={post.frontmatter.date}
             featuredImage={image}
+            description={post.frontmatter.description}
           />
         }
       >
@@ -35,11 +35,11 @@ const BlogPostTemplate = ({ data, location }) => {
         <ContentNav
           previous={{
             title: previous?.frontmatter?.title,
-            link: `/blog${previous?.fields?.slug}`,
+            link: `/posts${previous?.fields?.slug}`,
           }}
           next={{
             title: next?.frontmatter?.title,
-            link: `/blog${next?.fields?.slug}`,
+            link: `/posts${next?.fields?.slug}`,
           }}
         />
       </FullLayout>
@@ -47,14 +47,10 @@ const BlogPostTemplate = ({ data, location }) => {
   );
 };
 
-export default BlogPostTemplate;
+export default PostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
+  query PostBySlug($id: String!, $previousPostId: String, $nextPostId: String) {
     site {
       siteMetadata {
         title

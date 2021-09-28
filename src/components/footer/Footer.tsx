@@ -1,13 +1,14 @@
-import { Box } from "@chakra-ui/layout";
+import { Box, Flex, Text } from "@chakra-ui/layout";
 
 const Footer = () => {
   return (
     <>
-      <Box as="footer" p={4}>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </Box>
+      <Flex as="footer" justifyContent="center" w="100%" py={2}>
+        <Text fontSize={["0.6em","xs"]}>
+          All Rights Reserved | © {new Date().getFullYear()} | Made by Omar with
+          ❤️ and ☕
+        </Text>
+      </Flex>
     </>
   );
 };

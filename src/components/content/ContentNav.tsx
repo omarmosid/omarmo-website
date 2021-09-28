@@ -1,4 +1,7 @@
-import { Box } from "@chakra-ui/layout";
+import { Button, IconButton } from "@chakra-ui/button";
+import { Box, Flex, Grid, Text } from "@chakra-ui/layout";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { Link as GatsbyLink } from "gatsby";
 import { CustomLink } from "../link";
 
 type NextPrevObject = {
@@ -14,12 +17,26 @@ type ContentNavProps = {
 const ContentNav: React.FC<ContentNavProps> = ({ previous, next }) => {
   return (
     <>
-      {JSON.stringify({
-        previous,
-        next,
-      })}
-      <Box as="nav" pt="4">
-        <ul
+      <Grid as="nav" pt="4" templateColumns="1fr 1fr" gap={4}>
+        <Flex alignItems="flex-end">
+          {previous.title && (
+            <GatsbyLink to={previous.link}>
+              <Button variant="ghost" leftIcon={<BsArrowLeft />}>
+                {previous.title}
+              </Button>
+            </GatsbyLink>
+          )}
+        </Flex>
+        <Flex justifyContent="flex-end" alignItems="flex-end">
+          {next.title && (
+            <GatsbyLink to={next.link}>
+              <Button variant="ghost" rightIcon={<BsArrowRight />}>
+                {next.title}
+              </Button>
+            </GatsbyLink>
+          )}
+        </Flex>
+        {/* <ul
           style={{
             display: `flex`,
             flexWrap: `wrap`,
@@ -29,21 +46,21 @@ const ContentNav: React.FC<ContentNavProps> = ({ previous, next }) => {
           }}
         >
           <li>
-            {previous && (
+            {previous.link && (
               <CustomLink to={previous.link} rel="prev">
                 ← {previous.title}
               </CustomLink>
             )}
           </li>
           <li>
-            {next && (
+            {next.link && (
               <CustomLink to={next.link} rel="next">
                 {next.title} →
               </CustomLink>
             )}
           </li>
-        </ul>
-      </Box>
+        </ul> */}
+      </Grid>
     </>
   );
 };

@@ -2,7 +2,23 @@ import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
 const theme = extendTheme({
+  fonts: {
+    heading: "Tinos",
+    body: "Open Sans",
+  },
   colors: {
+    warmGray: {
+      50: "#FAFAF9",
+      100: "#F5F5F4",
+      200: "#E7E5E4",
+      300: "#D6D3D1",
+      400: "#A8A29E",
+      500: "#78716C",
+      600: "#57534E",
+      700: "#44403C",
+      800: "#292524",
+      900: "#1C1917",
+    },
     brand: {
       50: "#251162",
       75: "#1E1571",
@@ -23,12 +39,12 @@ const theme = extendTheme({
     global: props => ({
       body: {
         fontFamily: "body",
-        color: mode("gray.800", "whiteAlpha.900")(props),
-        bg: mode("gray.100", "gray.800")(props),
+        color: mode("warmGray.800", "whiteAlpha.900")(props),
+        bg: mode("warmGray.100", "warmGray.900")(props),
         lineHeight: "base",
       },
       "p, ul, ol, span, li": {
-        color: mode("gray.800", "whiteAlpha.700")(props),
+        color: mode("warmGray.600", "whiteAlpha.600")(props),
       },
       ".heading-anchor": {
         svg: {
@@ -38,6 +54,7 @@ const theme = extendTheme({
       },
       ".content": {
         "h1, h2, h3, h4, h5, h6": {
+          fontFamily: "heading",
           fontWeight: "bold",
           letterSpacing: "tight",
           lineHeight: "shorter",
@@ -68,7 +85,7 @@ const theme = extendTheme({
           margin: "0",
           marginBottom: 6,
           padding: 0,
-          fontSize: "md",
+          fontSize: "lg",
         },
         a: {
           color: mode("brand.400", "brand.600")(props),
@@ -85,6 +102,7 @@ const theme = extendTheme({
         "ul li, ol li": {
           paddingLeft: 0,
           marginBottom: 4,
+          fontSize: "lg",
         },
 
         "li > p": {

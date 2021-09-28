@@ -11,7 +11,7 @@ const ScrollToTop: React.FC<ScrollToTopProps> = () => {
       <Box position="fixed" bottom={["4", "8"]} right={["4", "8"]}>
         <IconButton
           aria-label="Scroll to top"
-          onClick={() => scrollTo("#header")}
+          onClick={() => scrollTo("#main-start")}
           icon={<BsArrowUp />}
         />
       </Box>

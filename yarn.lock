@@ -1720,6 +1720,16 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/open-sans@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.1.tgz#3ad91ff0ee29d6dece501248840d2dd4f63e94a5"
+  integrity sha512-Zvse9PG3XU+gfa44i4ENXvZi28X0RTtuc/b1v4AaqrSpSf2OALN2QrBf91BOC5gXU1Y6xW/S0To5wz8EraLPlQ==
+
+"@fontsource/tinos@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/tinos/-/tinos-4.5.0.tgz#2f772f1f5e6c36c887fbe15bbfec9395ec4b95eb"
+  integrity sha512-j+Ym2Mv6fn3lLqU+9sKCoyumD1U9y/rAqMV6bu6sMrIfh8vygaLoR5exBZBulrd4/V+2b3I36diDdNLZtoP70g==
+
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-1.3.6.tgz#4e8225836959be247890b66f21a3198a0589e34d"

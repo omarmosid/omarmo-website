@@ -36,14 +36,14 @@ export const Nav = () => {
   return (
     <Box id="nav" position={["static", "sticky"]} top="0px" zIndex="popover">
       <Flex
-        bg={useColorModeValue("gray.100", "gray.800")}
+        bg={useColorModeValue("warmGray.100", "warmGray.900")}
         color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
         borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
+        borderColor={useColorModeValue("gray.200", "gray.700")}
         align={"center"}
         zIndex="popover"
       >
