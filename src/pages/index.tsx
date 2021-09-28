@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/layout";
 import GatsbyLink from "gatsby-link";
 import { FullLayout } from "../components/layout";
-import { CustomLink } from "../components/link";
+import { CustomLink } from "../components/link/CustomLink";
 import { FcBusinessman, FcBullish, FcBinoculars } from "react-icons/fc";
 
 const Home = () => {
