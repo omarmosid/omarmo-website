@@ -9,8 +9,8 @@ type SeoProps = {
   description?: string;
   banner?: string;
   article?: boolean;
-  pathname: string;
-  node: any;
+  pathname?: string;
+  node?: any;
 };
 
 const Seo: React.FC<SeoProps> = ({
@@ -48,7 +48,7 @@ const Seo: React.FC<SeoProps> = ({
 
   return (
     <>
-      <Helmet title={title}>
+      <Helmet title={`${title} | ${defaultTitle}`}>
         <html lang={siteLanguage} />
         <meta name="description" content={seo.description} />
         <meta name="image" content={seo.image} />

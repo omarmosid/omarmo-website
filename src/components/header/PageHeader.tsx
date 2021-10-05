@@ -17,7 +17,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title }) => {
         p={10}
         bgGradient={useColorModeValue(
           "linear-gradient(300deg, yellow.300, yellow.400)",
-          "linear-gradient(300deg, yellow.500, yellow.600)"
+          "linear-gradient(300deg, yellow.400, yellow.500)"
         )}
       >
         <Box w="100%" maxW="4xl">

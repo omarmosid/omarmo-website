@@ -88,7 +88,7 @@ const theme = extendTheme({
           fontSize: "lg",
         },
         a: {
-          color: mode("brand.400", "brand.600")(props),
+          color: mode("yellow.500", "yellow.400")(props),
           textDecoration: "underline",
         },
         "ul, ol": {

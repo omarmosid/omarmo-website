@@ -21,6 +21,7 @@ import {
 } from "react-icons/fc";
 import { PageHeader } from "../components/header/PageHeader";
 import { FullLayout } from "../components/layout";
+import { CustomLink } from "../components/nav/CustomLink";
 import { Seo } from "../components/seo";
 
 type NowItemType = {
@@ -93,13 +94,13 @@ const Now = ({ data }) => {
                   <ListItem>
                     <NowItemIcon type={nowItem.type} />
                     {capitalize(nowItem.type)}{" "}
-                    <Link
-                      href={nowItem.link}
+                    <CustomLink
+                      to={nowItem.link}
                       isExternal
-                      color={useColorModeValue("brand.400", "brand.600")}
+                      color={useColorModeValue("yellow.500", "yellow.400")}
                     >
                       {nowItem.description}
-                    </Link>
+                    </CustomLink>
                   </ListItem>
                 );
               }

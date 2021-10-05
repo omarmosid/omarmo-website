@@ -48,7 +48,11 @@ const ContentCard: React.FC<ContentCardProps> = ({
           />
         </Box>
         <Stack>
-          <Heading as="h2" fontSize="2xl">
+          <Heading
+            as="h2"
+            fontSize="2xl"
+            color={useColorModeValue("warmGray.700", "warmGray.300")}
+          >
             {truncate(title, {
               length: 60,
             })}
