@@ -16,8 +16,8 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title }) => {
         alignItems="flex-end"
         p={10}
         bgGradient={useColorModeValue(
-          "linear-gradient(300deg, yellow.300, yellow.400)",
-          "linear-gradient(300deg, yellow.400, yellow.500)"
+          "linear-gradient(300deg, warmGray.300, warmGray.400)",
+          "linear-gradient(300deg, warmGray.600, warmGray.700)"
         )}
       >
         <Box w="100%" maxW="4xl">
