@@ -5,7 +5,7 @@ import { ContentBody } from "../components/content";
 import { ContentNav } from "../components/content/ContentNav";
 import { ContentHeader } from "../components/header";
 import { FullLayout } from "../components/layout";
-import Seo from "../components/seo";
+import { Seo } from "../components/seo";
 
 const ProjectTemplate = ({ data, location }) => {
   const project = data.markdownRemark;

@@ -1,15 +1,27 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
+const website = require("./config/website");
+
+const pathPrefix = website.pathPrefix === "/" ? "" : website.pathPrefix;
+
 module.exports = {
+  /* General Information */
+  pathPrefix: website.pathPrefix,
   siteMetadata: {
-    title: `Omar Mohammad`,
-    author: {
-      name: `Omar Mohammad`,
-      summary: `,who is Full-Stack Developer passionate about building performant and accessible web apps that make life easier.`,
-    },
-    description: `Full-Stack Developer passionate about building performant and accessible web apps that make life easier.`,
-    siteUrl: `https://omarmo.com/`,
-    social: {
-      twitter: `omarmosid`,
-    },
+    siteUrl: website.url + pathPrefix, // For gatsby-plugin-sitemap
+    pathPrefix,
+    title: website.title,
+    titleAlt: website.titleAlt,
+    description: website.description,
+    banner: website.logo,
+    headline: website.headline,
+    siteLanguage: website.siteLanguage,
+    ogLanguage: website.ogLanguage,
+    author: website.author,
+    twitter: website.twitter,
+    facebook: website.facebook,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -150,7 +162,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/omarmo-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,

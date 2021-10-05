@@ -6,7 +6,7 @@ import CardContainer from "../components/card/CardContainer";
 import { ContentCard } from "../components/card/ContentCard";
 import { PageHeader } from "../components/header/PageHeader";
 import { FullLayout } from "../components/layout/FullLayout";
-import Seo from "../components/seo";
+import { Seo } from "../components/seo";
 
 const Posts = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;

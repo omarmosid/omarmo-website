@@ -21,7 +21,7 @@ import {
 } from "react-icons/fc";
 import { PageHeader } from "../components/header/PageHeader";
 import { FullLayout } from "../components/layout";
-import Seo from "../components/seo";
+import { Seo } from "../components/seo";
 
 type NowItemType = {
   type: "READING" | "PLAYING" | "WATCHING" | "LISTENING" | "LEARNING";

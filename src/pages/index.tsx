@@ -12,10 +12,15 @@ import GatsbyLink from "gatsby-link";
 import { FullLayout } from "../components/layout";
 import { CustomLink } from "../components/nav/CustomLink";
 import { FcBusinessman, FcBullish, FcBinoculars } from "react-icons/fc";
+import { Seo } from "../components/seo";
 
 const Home = () => {
   return (
     <>
+      <Seo
+        title="Home"
+        description="Omar is self-taught Full-Stack Engineer passionate about harnessing the power of data to build products that delight users."
+      />
       <FullLayout>
         <Box pt={28} pb={10}>
           <Heading as="h1" pb={6} fontSize={["4xl", "6xl"]}>
