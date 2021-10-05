@@ -19,7 +19,7 @@ const Home = () => {
     <>
       <Seo
         title="Home"
-        description="Omar is self-taught Full-Stack Engineer passionate about harnessing the power of data to build products that delight users."
+        description="Omar is a self-taught Full-Stack Engineer passionate about harnessing the power of data to build products that delight users."
       />
       <FullLayout>
         <Box pt={28} pb={10}>

@@ -24,7 +24,7 @@ const ContentHeader: React.FC<ContentHeaderProps> = ({
           fontSize={["3xl", "4xl", "6xl"]}
           itemProp="headline"
           id="header"
-          color={useColorModeValue("gray.700", "gray.300")}
+          color={useColorModeValue("warmGray.700", "warmGray.300")}
         >
           {title}
         </Heading>

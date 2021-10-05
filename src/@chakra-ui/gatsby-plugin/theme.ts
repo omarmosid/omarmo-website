@@ -56,11 +56,11 @@ const theme = extendTheme({
         "h1, h2, h3, h4, h5, h6": {
           fontFamily: "heading",
           fontWeight: "bold",
-          letterSpacing: "tight",
+          letterSpacing: "-3%",
           lineHeight: "shorter",
           mt: 12,
           mb: 4,
-          color: mode("brand.400", "brand.600")(props),
+          color: mode("yellow.600", "yellow.400")(props),
         },
         h1: {
           fontSize: "4xl",

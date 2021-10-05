@@ -1,3 +1,4 @@
+import { useColorMode, useColorModeValue } from "@chakra-ui/color-mode";
 import { Box, Flex, Heading } from "@chakra-ui/layout";
 import React from "react";
 
@@ -14,10 +15,18 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title }) => {
         justifyContent="center"
         alignItems="flex-end"
         p={10}
-        bgGradient="linear-gradient(45deg, brand.400, brand.600)"
+        bgGradient={useColorModeValue(
+          "linear-gradient(300deg, yellow.300, yellow.400)",
+          "linear-gradient(300deg, yellow.500, yellow.600)"
+        )}
       >
         <Box w="100%" maxW="4xl">
-          <Heading as="h1" fontSize={["4xl", "6xl"]} color="gray.100">
+          <Heading
+            as="h1"
+            fontSize={["4xl", "6xl"]}
+            color={useColorModeValue("warmGray.800", "warmGray.200")}
+            textShadow="md"
+          >
             {title}
           </Heading>
         </Box>
